@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionManager {
-    private static final String url = "webproject-236616:us-central1:webproject";
+    private static final String url = "jdbc:postgresql://google/users?socketFactory=com.google.cloud.sql.postgres.SocketFactory&cloudSqlInstance=webproject-236616:us-central1:webproject";
     private static final String user = "postgres";
     private static final String password = "123456";
 
