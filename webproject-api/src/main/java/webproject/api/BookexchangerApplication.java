@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WebprojectApiApplication {
+public class BookexchangerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WebprojectApiApplication.class, args);
+		SpringApplication.run(BookexchangerApplication.class, args);
 	}
 
 }

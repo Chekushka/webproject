@@ -1,41 +1,44 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Route,NavLink,Switch} from 'react-router-dom';
 import './App.css';
-import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
+import SignUpForm from './pages/SignUpForm.js';
+import SignInForm from './pages/SignInForm.js';
+import NotFound from './pages/NotFound';
+import main from './pages/main';
 import ExpenceList from './pages/expences/ExpenceList';
-import RegistrationForm from './pages/account/RegistrationForm';
-import Notfound from './pages/common/NotFound';
 
 class App extends Component {
-
-  constructor() {
-      super();
-      console.log("[App] constructor");
+  constructor(){
+    super();
+    console.log("[App] constructor");
   }
-
   componentDidMount() {
     console.log("[App] componentDidMount");
   }
-
   componentWillUnmount() {
     console.log("[App] componentWillUnmount");
   }
-
   render() {
+  
     console.log("[App] render");
-    
     return (
-      <Router>
-      <div className="App">
-        <h1>Book Exchanger</h1>  
-        <div>
-          <Link to="/register">Register</Link>
+        <Router>
+        <div className="App">
+          <div>
+            <h1>EXBooks</h1>
+            <div>
+            <NavLink exact to ="/">Main</NavLink>   <NavLink to ="/sign-in">Sign in</NavLink>   <NavLink to ="/sign-up">Sign up</NavLink>  <NavLink exact to ="/books">Books</NavLink> 
+            </div>
+            <Switch>
+
+              <Route exact path="/" component={main}/>
+              <Route  path="/sign-up" component={SignUpForm}/>
+              <Route path="/sign-in" component={SignInForm}/> 
+              <Route path="/books" component={ExpenceList}/> 
+              <Route component={NotFound} /> 
+            </Switch>
+          </div>  
         </div>
-        <Switch>
-          <Route exact path="/" component={ExpenceList} />
-          <Route path="/register" component={RegistrationForm} />
-          <Route component={Notfound} />          
-        </Switch>
-      </div>
       </Router>
     );
   }

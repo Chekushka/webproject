@@ -1,4 +1,3 @@
-    
 import React, { Component } from 'react';
 import ExpenceItem from './ExpenceItem';
 
@@ -20,8 +19,9 @@ class ExpenceList extends Component {
                 return response.json();
                 
             }).then(data => {
+                console.log(data)
                 initialItems = data.map((planet) => {
-                console.log(planet)
+               
                 return planet
             });
 

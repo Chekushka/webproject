@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-
 class ExpenceItem extends Component {
 
     constructor() {
@@ -11,7 +9,7 @@ class ExpenceItem extends Component {
     componentDidMount() {
         console.log("[ExpenceItem] componentDidMount");
     }
-    
+
     componentWillUnmount() {
         console.log("[ExpenceItem] componentWillUnmount");
     }
@@ -30,5 +28,4 @@ class ExpenceItem extends Component {
         );
     }
 }
-
 export default ExpenceItem;

@@ -16,6 +16,13 @@
 
 	<properties>
 		<java.version>11</java.version>
+
+			<INSTANCE_CONNECTION_NAME>webproject-236616:us-central1:webproject	</INSTANCE_CONNECTION_NAME>
+			<user>postgres</user>
+			<password>123456</password>
+			<database>webproject-DB</database>
+			<sqlURL>jdbc:postgresql://google/webproject-DB?cloudSqlInstance=webproject-236616:us-central1:webproject
+				&amp;socketFactory=com.google.cloud.sql.postgres.SocketFactory&amp;user=postgres&amp;password=123456</sqlURL>
 	</properties>
 
 	<dependencies>
@@ -30,10 +37,15 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>webproject</groupId>
-			<artifactId>webproject-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>com.google.cloud.sql</groupId>
+			<artifactId>postgres-socket-factory</artifactId>
+			<version>1.0.13</version>
 		</dependency>
+		<dependency>
+		<groupId>postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<version>9.1-901-1.jdbc4</version>
+	</dependency>
 	</dependencies>
 
 	<build>

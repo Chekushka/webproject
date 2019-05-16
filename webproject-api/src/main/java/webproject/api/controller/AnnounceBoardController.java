@@ -1,4 +1,4 @@
-package webproject.api.controllers;
+package webproject.api.controller;
 
 import webproject.api.entities.AnnounceBoardEntity;
 import webproject.api.models.AnnounceAddRequest;
