@@ -1,0 +1,18 @@
+a.BookItem:link, a:visited {
+    
+    color: white;
+    padding: 5px 10px;
+    text-align: center; 
+    text-decoration: underline solid rgb(68, 68, 68);
+    display: inline-block;
+    border: 5px;
+    border-style: dashed;
+    border-color: rgb(255, 255, 255);
+    
+  }
+  a.BookItem:hover, a:active {
+    text-decoration: underline solid rgb(68, 68, 68);
+    border: 5px;
+    border-style: dashed;
+    border-color: rgb(255, 255, 255);
+  }

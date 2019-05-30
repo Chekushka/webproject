@@ -7,6 +7,7 @@ public class AnnounceBoardEntity {
     private Integer userId;
     private Integer bookId;
     private LocalDateTime announceTimestamp;
+    private String accept;
 
     public AnnounceBoardEntity() {
     }
@@ -16,6 +17,14 @@ public class AnnounceBoardEntity {
         this.userId = userId;
         this.bookId = bookId;
         this.announceTimestamp = announceTimestamp;
+    }
+
+    public String getAccept() {
+        return accept;
+    }
+
+    public void setAccept(String accept) {
+        this.accept = accept;
     }
 
     public Integer getId() {

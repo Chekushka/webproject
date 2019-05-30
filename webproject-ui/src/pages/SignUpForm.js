@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
+import './cssPages/SignUpForm.css';
 class SignUpForm extends Component{
     constructor() {
         super();
@@ -51,47 +52,41 @@ class SignUpForm extends Component{
 render(){
   console.log("[SignUpForm] render"); 
     return(
-<div >
+  <div className="signup">
     <form onSubmit={this.onSubmit}>
                 <div>
-                    <label  htmlFor="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your full email" name="email" value={this.state.email} onChange={this.handleChange}/>
+                    <input className="signup" type="email" id="email" placeholder="Enter your full email" name="email" value={this.state.email} onChange={this.handleChange}/>
                 </div>
 
 
                 <div>
-                    <label htmlFor="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your full password" name="password" value={this.state.password} onChange={this.handleChange}/>
+                    <input className="signup" type="password" id="password" placeholder="Enter your full password" name="password" value={this.state.password} onChange={this.handleChange}/>
                 </div>
             
                 
                 <div >
-                    <label htmlFor="Firstname">First Name</label>
-                    <input type="text" id="firstName"  placeholder="Enter your firstname" name="firstName" value={this.state.firstName} onChange={this.handleChange}/>
+                    <input className="signup" type="text" id="firstName"  placeholder="Enter your firstname" name="firstName" value={this.state.firstName} onChange={this.handleChange}/>
                 </div>
                 
                 <div >
-                    <label htmlFor="Secondname">Second Name</label>
-                    <input type="text" id="surname"  placeholder="Enter your secondname" name="surname" value={this.state.surname} onChange={this.handleChange}/>
+                    <input className="signup" type="text" id="surname"  placeholder="Enter your secondname" name="surname" value={this.state.surname} onChange={this.handleChange}/>
                 </div>
                 
                 <div >
-                    <label htmlFor="Phone">Phone</label>
-                    <input type="text" id="phone"  placeholder="Enter your phone" name="phone" value={this.state.phone} onChange={this.handleChange}/>
+                    <input className="signup" type="text" id="phone"  placeholder="Enter your phone" name="phone" value={this.state.phone} onChange={this.handleChange}/>
                 </div>
 
                 <div >
                   <label >
                     <input  type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange={this.handleChange}/>
-                    I agreed with
-                    <a href="">this</a>
+                    I agreed with <a href="">this</a>
                   </label>
                 </div>
 
                 <h1></h1>
                 
                 <div>
-                  <button>Sign up</button>
+                  <button className="Button">Sign up</button>
                   <hr></hr>
                   <Link to="/sign-in">I am already member</Link>
                 </div>

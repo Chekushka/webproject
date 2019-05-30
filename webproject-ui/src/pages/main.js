@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './cssPages/main.css';
 class main extends React.Component {
 
     constructor() {
@@ -18,11 +18,11 @@ class main extends React.Component {
     render() {
         console.log("[Main] render");        
         return (
-        <div>
-        EXBooks-book exchange platform
-        <h5>in development...</h5>
+        <div className="main">
+        Book Exchange Platform <br></br>
+        </div>
         
-        </div>);
+        );
     }
 
 }

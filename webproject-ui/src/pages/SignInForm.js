@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
+import './cssPages/SignInForm.css';
 class SignInForm extends Component{
     constructor() {
         super();
@@ -33,24 +34,22 @@ class SignInForm extends Component{
 
     render(){
     return(
-   <div >
-    <form className="FormField" onSubmit={this.handleSubmit}>
+   <div className="signin">
+    <form  onSubmit={this.handleSubmit}>
 
               
                 <div>
-                    <label htmlFor="email">email</label>
-                    <input type="email" id="email" placeholder="Enter your full email" name="email" value={this.state.email} onChange={this.handleChange}/>
+                    <input className="signin" type="email" id="email" placeholder="Enter your full email" name="email" value={this.state.email} onChange={this.handleChange}/>
                 </div>
               
                 <div>
-                    <label htmlFor="password">password</label>
-                    <input type="password" id="password" placeholder="Enter your full password" name="password" value={this.state.password} onChange={this.handleChange}/>
+                    <input className="signin" type="password" id="password" placeholder="Enter your full password" name="password" value={this.state.password} onChange={this.handleChange}/>
                 </div>
             
                 <div>
-                  <button>Sign in</button>
+                  <button className="myButton" >Sign in</button>
                   <hr></hr>
-                  <Link to="/">Create an account</Link>
+                  <Link to="/sign-up">Create an account</Link>
                 </div>
     </form>
 </div>

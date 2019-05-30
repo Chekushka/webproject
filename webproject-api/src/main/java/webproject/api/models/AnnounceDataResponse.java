@@ -7,12 +7,22 @@ public class AnnounceDataResponse {
     private String user;
     private String book;
     private LocalDateTime announceTimestamp;
+    private String accept;
 
-    public AnnounceDataResponse(Integer id, String user, String book, LocalDateTime announceTimestamp) {
+    public AnnounceDataResponse(Integer id, String user, String book, LocalDateTime announceTimestamp, String accept) {
         this.id = id;
         this.user = user;
         this.book = book;
         this.announceTimestamp = announceTimestamp;
+        this.accept = accept;
+    }
+
+    public String getAccept() {
+        return accept;
+    }
+
+    public void setAccept(String accept) {
+        this.accept = accept;
     }
 
     public Integer getId() {

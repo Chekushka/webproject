@@ -1,0 +1,7 @@
+div.not{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background:  rgb(255, 0, 0);
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+}

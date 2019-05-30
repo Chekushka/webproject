@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './cssPages/NotFound.css'
 class NotFound extends React.Component {
 
     constructor() {
@@ -17,7 +17,7 @@ class NotFound extends React.Component {
 
     render() {
         console.log("[NotFound] render");        
-        return (<div>Page not found</div>);
+        return (<div className="not">Page not found</div>);
     }
 
 }
